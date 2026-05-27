@@ -1,6 +1,6 @@
 {
   "created_at": "2026-05-26 15:59:05",
-  "total_authorized_usd": 40542132190009.83,
+  "total_authorized_usd": 40542132190028.61,
   "entries": [
     {
       "reference": "MOB-593A6808",
@@ -2074,6 +2074,70 @@
       "token_amount": 1712248134548.0,
       "usd_equivalent": 1712248134548.0,
       "conversion_rate": 1.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-DBEA8D6D",
+      "date": "2026-05-27 17:15:05",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-B383CB9CA301",
+      "geographic_alignment": {
+        "latitude": 48.8577,
+        "longitude": 2.3258,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USDT",
+      "token_amount": 1.437365,
+      "usd_equivalent": 1.437365,
+      "conversion_rate": 1.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-DCDA5C18",
+      "date": "2026-05-27 17:29:33",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-6DEBA67B09A5",
+      "geographic_alignment": {
+        "latitude": 48.8612,
+        "longitude": 2.3967,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USDT",
+      "token_amount": 9.0,
+      "usd_equivalent": 8.98551,
+      "conversion_rate": 0.99839,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-567F79B9",
+      "date": "2026-05-27 19:39:18",
+      "agency": "Test Agency",
+      "approval_hash": "APR-9884CF21E0A8",
+      "destination_address": "0x42d7c506A7B753efea2DAc0694289ED3Bb46599E",
+      "geographic_alignment": {
+        "latitude": 48.8566,
+        "longitude": 2.3522,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "SOL",
+      "token_amount": 0.1,
+      "usd_equivalent": 8.351,
+      "conversion_rate": 83.51,
       "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
       "qualitative_metadata": {
         "mobility_tier": "Premium Gold",

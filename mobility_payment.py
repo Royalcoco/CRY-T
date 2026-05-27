@@ -57,7 +57,7 @@ def get_crypto_prices():
     except Exception:
         return {"USD": 1.0, "USDT": 1.0, "BTC": 65000.0, "ETH": 3500.0, "SOL": 150.0}, False
 
-def request_mobility_payment(token, amount, lat=None, lon=None, agency_name="Agence Mobilité Centre"):
+def request_mobility_payment(token, amount, lat=None, lon=None, agency_name="Agence Mobilité Centre", destination_address="0x42d7c506A7B753efea2DAc0694289ED3Bb46599E"):
     wallet = load_wallet()
     token = token.upper()
     
@@ -96,6 +96,7 @@ def request_mobility_payment(token, amount, lat=None, lon=None, agency_name="Age
         "date": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "agency": agency_name,
         "approval_hash": agency_approval_hash,
+        "destination_address": destination_address,
         "geographic_alignment": {
             "latitude": lat,
             "longitude": lon,
@@ -123,6 +124,7 @@ def request_mobility_payment(token, amount, lat=None, lon=None, agency_name="Age
         "event": "mobility_payment_authorization",
         "reference": reference_id,
         "agency_approval_hash": agency_approval_hash,
+        "destination_address": destination_address,
         "latitude": lat,
         "longitude": lon,
         "token": token,
@@ -150,11 +152,14 @@ def generate_mobility_audio(entry):
         from gtts import gTTS
         from audio_renderer import play_audio_file
         
+        # Prononcer les 4 derniers caractères de l'adresse de destination pour rester court et mélodieux
+        dest_short = entry['destination_address'][-4:]
         text = (
             f"Autorisation de paiement mobilité validée. "
             f"Référence : {entry['reference']}. "
             f"Montant converti : {entry['token_amount']:.4f} {entry['token_used']}. "
             f"Équivalent : {entry['usd_equivalent']:.2f} dollars. "
+            f"Versé à l'adresse finissant par {dest_short}. "
             f"Réserve géographiquement alignée à la latitude {entry['geographic_alignment']['latitude']}. "
             f"Approbation par l'agence de données mobile confirmée."
         )
@@ -171,7 +176,7 @@ def generate_mobility_audio(entry):
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        print("Usage: python mobility_payment.py <TOKEN> <AMOUNT> [LAT] [LON] [AGENCY]")
+        print("Usage: python mobility_payment.py <TOKEN> <AMOUNT> [LAT] [LON] [AGENCY] [DEST_ADDR]")
         sys.exit(1)
         
     token_arg = sys.argv[1]
@@ -184,8 +189,9 @@ if __name__ == "__main__":
     lat_arg = float(sys.argv[3]) if len(sys.argv) > 3 else None
     lon_arg = float(sys.argv[4]) if len(sys.argv) > 4 else None
     agency_arg = sys.argv[5] if len(sys.argv) > 5 else "Agence Mobilité Centre"
+    dest_arg = sys.argv[6] if len(sys.argv) > 6 else "0x42d7c506A7B753efea2DAc0694289ED3Bb46599E"
     
-    success, result = request_mobility_payment(token_arg, amount_arg, lat_arg, lon_arg, agency_arg)
+    success, result = request_mobility_payment(token_arg, amount_arg, lat_arg, lon_arg, agency_arg, dest_arg)
     if success:
         print(json.dumps({"success": True, "transaction": result}, indent=2, ensure_ascii=False))
     else:
