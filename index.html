@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Historique des retraits – Crypto Wallet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>🪙 Historique des retraits de portefeuille</h1>
+      <p class="subtitle">Montant total retiré et détails récents</p>
+    </header>
+    <section class="summary">
+      <div class="card">
+        <h2>Total retiré</h2>
+        <p id="total" class="amount">$0.00</p>
+      </div>
+    </section>
+    <section class="table-section">
+      <h2>Dernières entrées (max 4)</h2>
+      <table id="entries-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Montant (USD)</th>
+            <th>Solde après</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button id="export-csv" class="btn export">📥 Export CSV</button>
+    </section>
+    <footer class="footer">
+      <small>Généré le <span id="generated-at"></span></small>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

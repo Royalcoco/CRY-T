@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Portefeuille - Vue</title>
+    <style>
+        body {font-family: 'Inter', Arial, sans-serif; background: #f0f4f8; margin: 2rem;}
+        .container {max-width: 600px; margin: auto; background: #fff; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);}
+        h1 {text-align: center; color: #333;}
+        table {width: 100%; border-collapse: collapse; margin-top: 1rem;}
+        th, td {padding: 0.8rem; text-align: left; border-bottom: 1px solid #e0e0e0;}
+        th {background: #4a90e2; color: #fff;}
+        tr:nth-child(even) {background: #f9f9f9;}
+        .refresh {margin-top: 1rem; display: flex; justify-content: center;}
+        button {background:#4a90e2; color:#fff; border:none; padding:0.6rem 1.2rem; border-radius:4px; cursor:pointer;}
+        button:hover {background:#357ab8;}
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Vue du portefeuille</h1>
+    <table id="walletTable">
+        <thead>
+            <tr><th>Devise</th><th>Solde</th></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div class="refresh"><button onclick="loadWallet()">Rafraîchir</button></div>
+</div>
+<script>
+    async function loadWallet() {
+        try {
+            const resp = await fetch('/wallet_data');
+            const data = await resp.json();
+            const tbody = document.querySelector('#walletTable tbody');
+            tbody.innerHTML = '';
+            for (const [currency, amount] of Object.entries(data)) {
+                const row = document.createElement('tr');
+                const cellCurr = document.createElement('td');
+                const cellAmt = document.createElement('td');
+                cellCurr.textContent = currency;
+                cellAmt.textContent = Number(amount).toLocaleString('fr-FR', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+                row.appendChild(cellCurr);
+                row.appendChild(cellAmt);
+                tbody.appendChild(row);
+            }
+        } catch (e) {
+            alert('Impossible de charger les données du portefeuille.');
+        }
+    }
+    // Load on page load
+    window.onload = loadWallet;
+</script>
+</body>
+</html>
