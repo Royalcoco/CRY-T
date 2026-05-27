@@ -1,356 +1,260 @@
 from __future__ import annotations
 
-import logging
-import re
-import threading
-import types
+import os
 import typing
 
-import h2.config
-import h2.connection
-import h2.events
+# use http.client.HTTPException for consistency with non-emscripten
+from http.client import HTTPException as HTTPException  # noqa: F401
+from http.client import ResponseNotReady
 
-from .._base_connection import _TYPE_BODY
-from .._collections import HTTPHeaderDict
-from ..connection import HTTPSConnection, _get_default_user_agent
-from ..exceptions import ConnectionError
-from ..response import BaseHTTPResponse
+from ..._base_connection import _TYPE_BODY
+from ...connection import HTTPConnection, ProxyConfig, port_by_scheme
+from ...exceptions import TimeoutError
+from ...response import BaseHTTPResponse
+from ...util.connection import _TYPE_SOCKET_OPTIONS
+from ...util.timeout import _DEFAULT_TIMEOUT, _TYPE_TIMEOUT
+from ...util.url import Url
+from .fetch import _RequestError, _TimeoutError, send_request, send_streaming_request
+from .request import EmscriptenRequest
+from .response import EmscriptenHttpResponseWrapper, EmscriptenResponse
 
-orig_HTTPSConnection = HTTPSConnection
-
-T = typing.TypeVar("T")
-
-log = logging.getLogger(__name__)
-
-RE_IS_LEGAL_HEADER_NAME = re.compile(rb"^[!#$%&'*+\-.^_`|~0-9a-z]+$")
-RE_IS_ILLEGAL_HEADER_VALUE = re.compile(rb"[\0\x00\x0a\x0d\r\n]|^[ \r\n\t]|[ \r\n\t]$")
-
-
-def _is_legal_header_name(name: bytes) -> bool:
-    """
-    "An implementation that validates fields according to the definitions in Sections
-    5.1 and 5.5 of [HTTP] only needs an additional check that field names do not
-    include uppercase characters." (https://httpwg.org/specs/rfc9113.html#n-field-validity)
-
-    `http.client._is_legal_header_name` does not validate the field name according to the
-    HTTP 1.1 spec, so we do that here, in addition to checking for uppercase characters.
-
-    This does not allow for the `:` character in the header name, so should not
-    be used to validate pseudo-headers.
-    """
-    return bool(RE_IS_LEGAL_HEADER_NAME.match(name))
+if typing.TYPE_CHECKING:
+    from ..._base_connection import BaseHTTPConnection, BaseHTTPSConnection
 
 
-def _is_illegal_header_value(value: bytes) -> bool:
-    """
-    "A field value MUST NOT contain the zero value (ASCII NUL, 0x00), line feed
-    (ASCII LF, 0x0a), or carriage return (ASCII CR, 0x0d) at any position. A field
-    value MUST NOT start or end with an ASCII whitespace character (ASCII SP or HTAB,
-    0x20 or 0x09)." (https://httpwg.org/specs/rfc9113.html#n-field-validity)
-    """
-    return bool(RE_IS_ILLEGAL_HEADER_VALUE.search(value))
+class EmscriptenHTTPConnection:
+    default_port: typing.ClassVar[int] = port_by_scheme["http"]
+    default_socket_options: typing.ClassVar[_TYPE_SOCKET_OPTIONS]
 
+    timeout: None | (float)
 
-class _LockedObject(typing.Generic[T]):
-    """
-    A wrapper class that hides a specific object behind a lock.
-    The goal here is to provide a simple way to protect access to an object
-    that cannot safely be simultaneously accessed from multiple threads. The
-    intended use of this class is simple: take hold of it with a context
-    manager, which returns the protected object.
-    """
+    host: str
+    port: int
+    blocksize: int
+    source_address: tuple[str, int] | None
+    socket_options: _TYPE_SOCKET_OPTIONS | None
 
-    __slots__ = (
-        "lock",
-        "_obj",
-    )
+    proxy: Url | None
+    proxy_config: ProxyConfig | None
 
-    def __init__(self, obj: T):
-        self.lock = threading.RLock()
-        self._obj = obj
+    is_verified: bool = False
+    proxy_is_verified: bool | None = None
 
-    def __enter__(self) -> T:
-        self.lock.acquire()
-        return self._obj
+    response_class: type[BaseHTTPResponse] = EmscriptenHttpResponseWrapper
+    _response: EmscriptenResponse | None
 
-    def __exit__(
-        self,
-        exc_type: type[BaseException] | None,
-        exc_val: BaseException | None,
-        exc_tb: types.TracebackType | None,
-    ) -> None:
-        self.lock.release()
-
-
-class HTTP2Connection(HTTPSConnection):
     def __init__(
-        self, host: str, port: int | None = None, **kwargs: typing.Any
-    ) -> None:
-        self._h2_conn = self._new_h2_conn()
-        self._h2_stream: int | None = None
-        self._headers: list[tuple[bytes, bytes]] = []
-
-        if "proxy" in kwargs or "proxy_config" in kwargs:  # Defensive:
-            raise NotImplementedError("Proxies aren't supported with HTTP/2")
-
-        super().__init__(host, port, **kwargs)
-
-        if self._tunnel_host is not None:
-            raise NotImplementedError("Tunneling isn't supported with HTTP/2")
-
-    def _new_h2_conn(self) -> _LockedObject[h2.connection.H2Connection]:
-        config = h2.config.H2Configuration(client_side=True)
-        return _LockedObject(h2.connection.H2Connection(config=config))
-
-    def connect(self) -> None:
-        super().connect()
-        with self._h2_conn as conn:
-            conn.initiate_connection()
-            if data_to_send := conn.data_to_send():
-                self.sock.sendall(data_to_send)
-
-    def putrequest(  # type: ignore[override]
         self,
-        method: str,
-        url: str,
-        **kwargs: typing.Any,
+        host: str,
+        port: int = 0,
+        *,
+        timeout: _TYPE_TIMEOUT = _DEFAULT_TIMEOUT,
+        source_address: tuple[str, int] | None = None,
+        blocksize: int = 8192,
+        socket_options: _TYPE_SOCKET_OPTIONS | None = None,
+        proxy: Url | None = None,
+        proxy_config: ProxyConfig | None = None,
     ) -> None:
-        """putrequest
-        This deviates from the HTTPConnection method signature since we never need to override
-        sending accept-encoding headers or the host header.
-        """
-        if "skip_host" in kwargs:
-            raise NotImplementedError("`skip_host` isn't supported")
-        if "skip_accept_encoding" in kwargs:
-            raise NotImplementedError("`skip_accept_encoding` isn't supported")
-
-        self._request_url = url or "/"
-        self._validate_path(url)  # type: ignore[attr-defined]
-
-        if ":" in self.host:
-            authority = f"[{self.host}]:{self.port or 443}"
-        else:
-            authority = f"{self.host}:{self.port or 443}"
-
-        self._headers.append((b":scheme", b"https"))
-        self._headers.append((b":method", method.encode()))
-        self._headers.append((b":authority", authority.encode()))
-        self._headers.append((b":path", url.encode()))
-
-        with self._h2_conn as conn:
-            self._h2_stream = conn.get_next_available_stream_id()
-
-    def putheader(self, header: str | bytes, *values: str | bytes) -> None:  # type: ignore[override]
-        # TODO SKIPPABLE_HEADERS from urllib3 are ignored.
-        header = header.encode() if isinstance(header, str) else header
-        header = header.lower()  # A lot of upstream code uses capitalized headers.
-        if not _is_legal_header_name(header):
-            raise ValueError(f"Illegal header name {str(header)}")
-
-        for value in values:
-            value = value.encode() if isinstance(value, str) else value
-            if _is_illegal_header_value(value):
-                raise ValueError(f"Illegal header value {str(value)}")
-            self._headers.append((header, value))
-
-    def endheaders(self, message_body: typing.Any = None) -> None:  # type: ignore[override]
-        if self._h2_stream is None:
-            raise ConnectionError("Must call `putrequest` first.")
-
-        with self._h2_conn as conn:
-            conn.send_headers(
-                stream_id=self._h2_stream,
-                headers=self._headers,
-                end_stream=(message_body is None),
-            )
-            if data_to_send := conn.data_to_send():
-                self.sock.sendall(data_to_send)
-        self._headers = []  # Reset headers for the next request.
-
-    def send(self, data: typing.Any) -> None:
-        """Send data to the server.
-        `data` can be: `str`, `bytes`, an iterable, or file-like objects
-        that support a .read() method.
-        """
-        if self._h2_stream is None:
-            raise ConnectionError("Must call `putrequest` first.")
-
-        with self._h2_conn as conn:
-            if data_to_send := conn.data_to_send():
-                self.sock.sendall(data_to_send)
-
-            if hasattr(data, "read"):  # file-like objects
-                while True:
-                    chunk = data.read(self.blocksize)
-                    if not chunk:
-                        break
-                    if isinstance(chunk, str):
-                        chunk = chunk.encode()
-                    conn.send_data(self._h2_stream, chunk, end_stream=False)
-                    if data_to_send := conn.data_to_send():
-                        self.sock.sendall(data_to_send)
-                conn.end_stream(self._h2_stream)
-                return
-
-            if isinstance(data, str):  # str -> bytes
-                data = data.encode()
-
-            try:
-                if isinstance(data, bytes):
-                    conn.send_data(self._h2_stream, data, end_stream=True)
-                    if data_to_send := conn.data_to_send():
-                        self.sock.sendall(data_to_send)
-                else:
-                    for chunk in data:
-                        conn.send_data(self._h2_stream, chunk, end_stream=False)
-                        if data_to_send := conn.data_to_send():
-                            self.sock.sendall(data_to_send)
-                    conn.end_stream(self._h2_stream)
-            except TypeError:
-                raise TypeError(
-                    "`data` should be str, bytes, iterable, or file. got %r"
-                    % type(data)
-                )
+        self.host = host
+        self.port = port
+        self.timeout = timeout if isinstance(timeout, float) else 0.0
+        self.scheme = "http"
+        self._closed = True
+        self._response = None
+        # ignore these things because we don't
+        # have control over that stuff
+        self.proxy = None
+        self.proxy_config = None
+        self.blocksize = blocksize
+        self.source_address = None
+        self.socket_options = None
+        self.is_verified = False
 
     def set_tunnel(
         self,
         host: str,
-        port: int | None = None,
+        port: int | None = 0,
         headers: typing.Mapping[str, str] | None = None,
         scheme: str = "http",
     ) -> None:
-        raise NotImplementedError(
-            "HTTP/2 does not support setting up a tunnel through a proxy"
-        )
+        pass
 
-    def getresponse(  # type: ignore[override]
-        self,
-    ) -> HTTP2Response:
-        status = None
-        data = bytearray()
-        with self._h2_conn as conn:
-            end_stream = False
-            while not end_stream:
-                # TODO: Arbitrary read value.
-                if received_data := self.sock.recv(65535):
-                    events = conn.receive_data(received_data)
-                    for event in events:
-                        if isinstance(event, h2.events.ResponseReceived):
-                            headers = HTTPHeaderDict()
-                            for header, value in event.headers:
-                                if header == b":status":
-                                    status = int(value.decode())
-                                else:
-                                    headers.add(
-                                        header.decode("ascii"), value.decode("ascii")
-                                    )
+    def connect(self) -> None:
+        pass
 
-                        elif isinstance(event, h2.events.DataReceived):
-                            data += event.data
-                            conn.acknowledge_received_data(
-                                event.flow_controlled_length, event.stream_id
-                            )
-
-                        elif isinstance(event, h2.events.StreamEnded):
-                            end_stream = True
-
-                if data_to_send := conn.data_to_send():
-                    self.sock.sendall(data_to_send)
-
-        assert status is not None
-        return HTTP2Response(
-            status=status,
-            headers=headers,
-            request_url=self._request_url,
-            data=bytes(data),
-        )
-
-    def request(  # type: ignore[override]
+    def request(
         self,
         method: str,
         url: str,
         body: _TYPE_BODY | None = None,
         headers: typing.Mapping[str, str] | None = None,
+        # We know *at least* botocore is depending on the order of the
+        # first 3 parameters so to be safe we only mark the later ones
+        # as keyword-only to ensure we have space to extend.
         *,
+        chunked: bool = False,
         preload_content: bool = True,
         decode_content: bool = True,
         enforce_content_length: bool = True,
-        **kwargs: typing.Any,
     ) -> None:
-        """Send an HTTP/2 request"""
-        if "chunked" in kwargs:
-            # TODO this is often present from upstream.
-            # raise NotImplementedError("`chunked` isn't supported with HTTP/2")
-            pass
-
-        if self.sock is not None:
-            self.sock.settimeout(self.timeout)
-
-        self.putrequest(method, url)
-
-        headers = headers or {}
-        for k, v in headers.items():
-            if k.lower() == "transfer-encoding" and v == "chunked":
-                continue
+        self._closed = False
+        if url.startswith("/"):
+            if self.port is not None:
+                port = f":{self.port}"
             else:
-                self.putheader(k, v)
+                port = ""
+            # no scheme / host / port included, make a full url
+            url = f"{self.scheme}://{self.host}{port}{url}"
+        request = EmscriptenRequest(
+            url=url,
+            method=method,
+            timeout=self.timeout if self.timeout else 0,
+            decode_content=decode_content,
+        )
+        request.set_body(body)
+        if headers:
+            for k, v in headers.items():
+                request.set_header(k, v)
+        self._response = None
+        try:
+            if not preload_content:
+                self._response = send_streaming_request(request)
+            if self._response is None:
+                self._response = send_request(request)
+        except _TimeoutError as e:
+            raise TimeoutError(e.message) from e
+        except _RequestError as e:
+            raise HTTPException(e.message) from e
 
-        if b"user-agent" not in dict(self._headers):
-            self.putheader(b"user-agent", _get_default_user_agent())
-
-        if body:
-            self.endheaders(message_body=body)
-            self.send(body)
+    def getresponse(self) -> BaseHTTPResponse:
+        if self._response is not None:
+            return EmscriptenHttpResponseWrapper(
+                internal_response=self._response,
+                url=self._response.request.url,
+                connection=self,
+            )
         else:
-            self.endheaders()
+            raise ResponseNotReady()
 
     def close(self) -> None:
-        with self._h2_conn as conn:
-            try:
-                conn.close_connection()
-                if data := conn.data_to_send():
-                    self.sock.sendall(data)
-            except Exception:
-                pass
-
-        # Reset all our HTTP/2 connection state.
-        self._h2_conn = self._new_h2_conn()
-        self._h2_stream = None
-        self._headers = []
-
-        super().close()
-
-
-class HTTP2Response(BaseHTTPResponse):
-    # TODO: This is a woefully incomplete response object, but works for non-streaming.
-    def __init__(
-        self,
-        status: int,
-        headers: HTTPHeaderDict,
-        request_url: str,
-        data: bytes,
-        decode_content: bool = False,  # TODO: support decoding
-    ) -> None:
-        super().__init__(
-            status=status,
-            headers=headers,
-            # Following CPython, we map HTTP versions to major * 10 + minor integers
-            version=20,
-            version_string="HTTP/2",
-            # No reason phrase in HTTP/2
-            reason=None,
-            decode_content=decode_content,
-            request_url=request_url,
-        )
-        self._data = data
-        self.length_remaining = 0
+        self._closed = True
+        self._response = None
 
     @property
-    def data(self) -> bytes:
-        return self._data
+    def is_closed(self) -> bool:
+        """Whether the connection either is brand new or has been previously closed.
+        If this property is True then both ``is_connected`` and ``has_connected_to_proxy``
+        properties must be False.
+        """
+        return self._closed
 
-    def get_redirect_location(self) -> None:
-        return None
+    @property
+    def is_connected(self) -> bool:
+        """Whether the connection is actively connected to any origin (proxy or target)"""
+        return True
 
-    def close(self) -> None:
+    @property
+    def has_connected_to_proxy(self) -> bool:
+        """Whether the connection has successfully connected to its proxy.
+        This returns False if no proxy is in use. Used to determine whether
+        errors are coming from the proxy layer or from tunnelling to the target origin.
+        """
+        return False
+
+
+class EmscriptenHTTPSConnection(EmscriptenHTTPConnection):
+    default_port = port_by_scheme["https"]
+    # all this is basically ignored, as browser handles https
+    cert_reqs: int | str | None = None
+    ca_certs: str | None = None
+    ca_cert_dir: str | None = None
+    ca_cert_data: None | str | bytes = None
+    cert_file: str | None
+    key_file: str | None
+    key_password: str | None
+    ssl_context: typing.Any | None
+    ssl_version: int | str | None = None
+    ssl_minimum_version: int | None = None
+    ssl_maximum_version: int | None = None
+    assert_hostname: None | str | typing.Literal[False]
+    assert_fingerprint: str | None = None
+
+    def __init__(
+        self,
+        host: str,
+        port: int = 0,
+        *,
+        timeout: _TYPE_TIMEOUT = _DEFAULT_TIMEOUT,
+        source_address: tuple[str, int] | None = None,
+        blocksize: int = 16384,
+        socket_options: (
+            None | _TYPE_SOCKET_OPTIONS
+        ) = HTTPConnection.default_socket_options,
+        proxy: Url | None = None,
+        proxy_config: ProxyConfig | None = None,
+        cert_reqs: int | str | None = None,
+        assert_hostname: None | str | typing.Literal[False] = None,
+        assert_fingerprint: str | None = None,
+        server_hostname: str | None = None,
+        ssl_context: typing.Any | None = None,
+        ca_certs: str | None = None,
+        ca_cert_dir: str | None = None,
+        ca_cert_data: None | str | bytes = None,
+        ssl_minimum_version: int | None = None,
+        ssl_maximum_version: int | None = None,
+        ssl_version: int | str | None = None,  # Deprecated
+        cert_file: str | None = None,
+        key_file: str | None = None,
+        key_password: str | None = None,
+    ) -> None:
+        super().__init__(
+            host,
+            port=port,
+            timeout=timeout,
+            source_address=source_address,
+            blocksize=blocksize,
+            socket_options=socket_options,
+            proxy=proxy,
+            proxy_config=proxy_config,
+        )
+        self.scheme = "https"
+
+        self.key_file = key_file
+        self.cert_file = cert_file
+        self.key_password = key_password
+        self.ssl_context = ssl_context
+        self.server_hostname = server_hostname
+        self.assert_hostname = assert_hostname
+        self.assert_fingerprint = assert_fingerprint
+        self.ssl_version = ssl_version
+        self.ssl_minimum_version = ssl_minimum_version
+        self.ssl_maximum_version = ssl_maximum_version
+        self.ca_certs = ca_certs and os.path.expanduser(ca_certs)
+        self.ca_cert_dir = ca_cert_dir and os.path.expanduser(ca_cert_dir)
+        self.ca_cert_data = ca_cert_data
+
+        self.cert_reqs = None
+
+        # The browser will automatically verify all requests.
+        # We have no control over that setting.
+        self.is_verified = True
+
+    def set_cert(
+        self,
+        key_file: str | None = None,
+        cert_file: str | None = None,
+        cert_reqs: int | str | None = None,
+        key_password: str | None = None,
+        ca_certs: str | None = None,
+        assert_hostname: None | str | typing.Literal[False] = None,
+        assert_fingerprint: str | None = None,
+        ca_cert_dir: str | None = None,
+        ca_cert_data: None | str | bytes = None,
+    ) -> None:
         pass
+
+
+# verify that this class implements BaseHTTP(s) connection correctly
+if typing.TYPE_CHECKING:
+    _supports_http_protocol: BaseHTTPConnection = EmscriptenHTTPConnection("", 0)
+    _supports_https_protocol: BaseHTTPSConnection = EmscriptenHTTPSConnection("", 0)
