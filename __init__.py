@@ -1,17 +1,45 @@
-from __future__ import annotations
+from .core import (
+    IDNABidiError,
+    IDNAError,
+    InvalidCodepoint,
+    InvalidCodepointContext,
+    alabel,
+    check_bidi,
+    check_hyphen_ok,
+    check_initial_combiner,
+    check_label,
+    check_nfc,
+    decode,
+    encode,
+    ulabel,
+    uts46_remap,
+    valid_contextj,
+    valid_contexto,
+    valid_label_length,
+    valid_string_length,
+)
+from .intranges import intranges_contain
+from .package_data import __version__
 
-import urllib3.connection
-
-from ...connectionpool import HTTPConnectionPool, HTTPSConnectionPool
-from .connection import EmscriptenHTTPConnection, EmscriptenHTTPSConnection
-
-
-def inject_into_urllib3() -> None:
-    # override connection classes to use emscripten specific classes
-    # n.b. mypy complains about the overriding of classes below
-    # if it isn't ignored
-    HTTPConnectionPool.ConnectionCls = EmscriptenHTTPConnection
-    HTTPSConnectionPool.ConnectionCls = EmscriptenHTTPSConnection
-    urllib3.connection.HTTPConnection = EmscriptenHTTPConnection  # type: ignore[misc,assignment]
-    urllib3.connection.HTTPSConnection = EmscriptenHTTPSConnection  # type: ignore[misc,assignment]
-    urllib3.connection.VerifiedHTTPSConnection = EmscriptenHTTPSConnection  # type: ignore[assignment]
+__all__ = [
+    "__version__",
+    "IDNABidiError",
+    "IDNAError",
+    "InvalidCodepoint",
+    "InvalidCodepointContext",
+    "alabel",
+    "check_bidi",
+    "check_hyphen_ok",
+    "check_initial_combiner",
+    "check_label",
+    "check_nfc",
+    "decode",
+    "encode",
+    "intranges_contain",
+    "ulabel",
+    "uts46_remap",
+    "valid_contextj",
+    "valid_contexto",
+    "valid_label_length",
+    "valid_string_length",
+]
