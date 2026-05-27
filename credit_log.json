@@ -1,0 +1,43 @@
+{
+  "created_at": "2026-05-22 12:48:22",
+  "daily_amount_usd": 1000000000.0,
+  "total_credited_usd": 2010251000.0,
+  "next_credit_due": "2026-05-28 10:43:45",
+  "entries": [
+    {
+      "date": "2026-05-22 12:48:22",
+      "amount_usd": 1000.0,
+      "balance_before": 1450.0,
+      "balance_after": 2450.0,
+      "next_credit_due": "2026-05-23 12:48:22"
+    },
+    {
+      "date": "2026-05-23 12:54:46",
+      "amount_usd": 250000.0,
+      "balance_before": 1050.0,
+      "balance_after": 251050.0,
+      "next_credit_due": "2026-05-24 12:54:46"
+    },
+    {
+      "date": "2026-05-24 17:21:28",
+      "amount_usd": 1000000000.0,
+      "balance_before": 151050.0,
+      "balance_after": 1000151050.0,
+      "next_credit_due": "2026-05-25 17:21:28"
+    },
+    {
+      "date": "2026-05-26 15:48:25",
+      "amount_usd": 10000000.0,
+      "balance_before": 1000151050.0,
+      "balance_after": 1010151050.0,
+      "next_credit_due": "2026-05-27 15:48:25"
+    },
+    {
+      "date": "2026-05-27 10:43:45",
+      "amount_usd": 1000000000.0,
+      "balance_before": 6400.0,
+      "balance_after": 1000006400.0,
+      "next_credit_due": "2026-05-28 10:43:45"
+    }
+  ]
+}

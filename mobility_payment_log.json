@@ -1,0 +1,2085 @@
+{
+  "created_at": "2026-05-26 15:59:05",
+  "total_authorized_usd": 40542132190009.83,
+  "entries": [
+    {
+      "reference": "MOB-593A6808",
+      "date": "2026-05-26 15:59:05",
+      "agency": "Agence Mobilité Centre",
+      "approval_hash": "APR-F8BFB16B2C44",
+      "geographic_alignment": {
+        "latitude": 48.8589,
+        "longitude": 2.3358,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "SOL",
+      "token_amount": 0.05,
+      "usd_equivalent": 4.274,
+      "conversion_rate": 85.48,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-D48471F9",
+      "date": "2026-05-26 18:33:38",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-1D4D672E8B0E",
+      "geographic_alignment": {
+        "latitude": 48.8624,
+        "longitude": 2.3557,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "SOL",
+      "token_amount": 20.0,
+      "usd_equivalent": 1683.4,
+      "conversion_rate": 84.17,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-D4300CCB",
+      "date": "2026-05-26 18:34:09",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-B361594B31DB",
+      "geographic_alignment": {
+        "latitude": 48.8561,
+        "longitude": 2.3245,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "ETH",
+      "token_amount": 800.0,
+      "usd_equivalent": 1660224.0000000002,
+      "conversion_rate": 2075.28,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-9A60500A",
+      "date": "2026-05-26 18:34:52",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-7163A7099831",
+      "geographic_alignment": {
+        "latitude": 48.818,
+        "longitude": 2.3355,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "SOL",
+      "token_amount": 70000.0,
+      "usd_equivalent": 5894700.0,
+      "conversion_rate": 84.21,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-766F48D8",
+      "date": "2026-05-26 18:36:04",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-1C3C5D7D4C0C",
+      "geographic_alignment": {
+        "latitude": 48.9023,
+        "longitude": 2.3504,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 14.0,
+      "usd_equivalent": 1070944.0,
+      "conversion_rate": 76496.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-DFBB907E",
+      "date": "2026-05-26 18:36:27",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-FC5EECE42887",
+      "geographic_alignment": {
+        "latitude": 48.8249,
+        "longitude": 2.3724,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 200.0,
+      "usd_equivalent": 15299200.0,
+      "conversion_rate": 76496.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-BBD67891",
+      "date": "2026-05-26 18:37:54",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-C963797A600E",
+      "geographic_alignment": {
+        "latitude": 48.8917,
+        "longitude": 2.3703,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 130.0,
+      "usd_equivalent": 8450000.0,
+      "conversion_rate": 65000.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-CB27DA70",
+      "date": "2026-05-26 18:38:17",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-7BC67A1BCDB6",
+      "geographic_alignment": {
+        "latitude": 48.9039,
+        "longitude": 2.3848,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USDT",
+      "token_amount": 1000000.0,
+      "usd_equivalent": 1000000.0,
+      "conversion_rate": 1.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-650124D0",
+      "date": "2026-05-26 18:41:42",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-F70EC61039ED",
+      "geographic_alignment": {
+        "latitude": 48.8642,
+        "longitude": 2.3973,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 1300.0,
+      "usd_equivalent": 99516300.0,
+      "conversion_rate": 76551.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-91AB7CF7",
+      "date": "2026-05-26 18:42:19",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-A242F5920081",
+      "geographic_alignment": {
+        "latitude": 48.902,
+        "longitude": 2.3154,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USD",
+      "token_amount": 100000000.0,
+      "usd_equivalent": 100000000.0,
+      "conversion_rate": 1.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-8A87FCEE",
+      "date": "2026-05-26 18:45:38",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-28A763973875",
+      "geographic_alignment": {
+        "latitude": 48.8944,
+        "longitude": 2.337,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "ETH",
+      "token_amount": 4000.817771,
+      "usd_equivalent": 8311218.821119981,
+      "conversion_rate": 2077.38,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-B2A0080E",
+      "date": "2026-05-26 18:49:16",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-EB5B0EA2C035",
+      "geographic_alignment": {
+        "latitude": 48.81,
+        "longitude": 2.3754,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "ETH",
+      "token_amount": 44.919182,
+      "usd_equivalent": 1572171.3699999999,
+      "conversion_rate": 35000.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-1B9B2D3C",
+      "date": "2026-05-26 18:50:22",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-640C1D094035",
+      "geographic_alignment": {
+        "latitude": 48.8641,
+        "longitude": 2.3072,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USD",
+      "token_amount": 100000000.0,
+      "usd_equivalent": 100000000.0,
+      "conversion_rate": 1.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-F870F38A",
+      "date": "2026-05-26 18:50:54",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-DD094E7DB327",
+      "geographic_alignment": {
+        "latitude": 48.8414,
+        "longitude": 2.3515,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USD",
+      "token_amount": 100000.0,
+      "usd_equivalent": 100000.0,
+      "conversion_rate": 1.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-DFC0E93D",
+      "date": "2026-05-26 18:56:46",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-C0E1026EB0EE",
+      "geographic_alignment": {
+        "latitude": 48.8511,
+        "longitude": 2.3073,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 69.157994,
+      "usd_equivalent": 5284638.953516,
+      "conversion_rate": 76414.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-836C3093",
+      "date": "2026-05-26 18:57:41",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-311947A0916D",
+      "geographic_alignment": {
+        "latitude": 48.8489,
+        "longitude": 2.3541,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "SOL",
+      "token_amount": 552.281732,
+      "usd_equivalent": 46452.416478520005,
+      "conversion_rate": 84.11,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-8F98B523",
+      "date": "2026-05-26 18:58:55",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-6AEE7036BC5D",
+      "geographic_alignment": {
+        "latitude": 48.879,
+        "longitude": 2.3113,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USDT",
+      "token_amount": 10000000.0,
+      "usd_equivalent": 10000000.0,
+      "conversion_rate": 1.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-3E53C87D",
+      "date": "2026-05-26 18:59:43",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-FE12FBE7A84B",
+      "geographic_alignment": {
+        "latitude": 48.8409,
+        "longitude": 2.3918,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 150.0,
+      "usd_equivalent": 11465100.0,
+      "conversion_rate": 76434.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-D6707301",
+      "date": "2026-05-26 19:02:39",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-D94F07BFE5F9",
+      "geographic_alignment": {
+        "latitude": 48.8294,
+        "longitude": 2.3469,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "ETH",
+      "token_amount": 521.614987,
+      "usd_equivalent": 1083404.7602987401,
+      "conversion_rate": 2077.02,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-3833C27D",
+      "date": "2026-05-26 19:04:13",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-3B1AE39371B2",
+      "geographic_alignment": {
+        "latitude": 48.8713,
+        "longitude": 2.3095,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 80.769231,
+      "usd_equivalent": 6177553.863804,
+      "conversion_rate": 76484.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-9F94F127",
+      "date": "2026-05-26 19:11:38",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-C189B7E98A86",
+      "geographic_alignment": {
+        "latitude": 48.8383,
+        "longitude": 2.3743,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "ETH",
+      "token_amount": 48.135705,
+      "usd_equivalent": 100000.0017093,
+      "conversion_rate": 2077.46,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-8EF7D5FA",
+      "date": "2026-05-26 19:16:11",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-2245FD47D15E",
+      "geographic_alignment": {
+        "latitude": 48.9051,
+        "longitude": 2.399,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USDT",
+      "token_amount": 1003001.590587,
+      "usd_equivalent": 1001800.9976830673,
+      "conversion_rate": 0.998803,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-3EA077D8",
+      "date": "2026-05-26 19:19:16",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-9D555B328998",
+      "geographic_alignment": {
+        "latitude": 48.822,
+        "longitude": 2.3932,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "SOL",
+      "token_amount": 5315.0322677,
+      "usd_equivalent": 446462.71048680006,
+      "conversion_rate": 84.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-22C0C15F",
+      "date": "2026-05-26 19:25:42",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-069264D5F79F",
+      "geographic_alignment": {
+        "latitude": 48.8455,
+        "longitude": 2.3076,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 199.0,
+      "usd_equivalent": 15151462.0,
+      "conversion_rate": 76138.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-3178EFF0",
+      "date": "2026-05-26 19:26:12",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-FCC1671E1A04",
+      "geographic_alignment": {
+        "latitude": 48.8501,
+        "longitude": 2.3669,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "ETH",
+      "token_amount": 79.0,
+      "usd_equivalent": 163423.35,
+      "conversion_rate": 2068.65,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-CF8CEB68",
+      "date": "2026-05-26 19:26:52",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-EA0F29B64ED0",
+      "geographic_alignment": {
+        "latitude": 48.8137,
+        "longitude": 2.3701,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "SOL",
+      "token_amount": 59.0,
+      "usd_equivalent": 4934.17,
+      "conversion_rate": 83.63,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-D67C1AE0",
+      "date": "2026-05-26 19:44:48",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-156DEF5584BC",
+      "geographic_alignment": {
+        "latitude": 48.81,
+        "longitude": 2.3105,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 11051.183889,
+      "usd_equivalent": 838353861.0034289,
+      "conversion_rate": 75861.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-D3427286",
+      "date": "2026-05-26 19:59:03",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-5B5EBB209EA7",
+      "geographic_alignment": {
+        "latitude": 48.8947,
+        "longitude": 2.3844,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 1500.0,
+      "usd_equivalent": 113925000.0,
+      "conversion_rate": 75950.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-9AA4156D",
+      "date": "2026-05-26 20:00:00",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-83DB1B223050",
+      "geographic_alignment": {
+        "latitude": 48.847,
+        "longitude": 2.3703,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "ETH",
+      "token_amount": 8837.0,
+      "usd_equivalent": 309295000.0,
+      "conversion_rate": 35000.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-FFF5A48E",
+      "date": "2026-05-26 20:00:26",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-1E2D422D42C2",
+      "geographic_alignment": {
+        "latitude": 48.8279,
+        "longitude": 2.3363,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "SOL",
+      "token_amount": 7500.0,
+      "usd_equivalent": 1125000.0,
+      "conversion_rate": 150.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-DCC17B3C",
+      "date": "2026-05-26 20:00:58",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-DD315DCAE892",
+      "geographic_alignment": {
+        "latitude": 48.8616,
+        "longitude": 2.304,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "SOL",
+      "token_amount": 320.0,
+      "usd_equivalent": 26723.2,
+      "conversion_rate": 83.51,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-E6E65EAD",
+      "date": "2026-05-26 20:01:39",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-EDCC60224747",
+      "geographic_alignment": {
+        "latitude": 48.8466,
+        "longitude": 2.317,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 320.0,
+      "usd_equivalent": 24271360.0,
+      "conversion_rate": 75848.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-531F8279",
+      "date": "2026-05-26 20:13:20",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-CEEB6C0553F5",
+      "geographic_alignment": {
+        "latitude": 48.8472,
+        "longitude": 2.3788,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 1305.917622,
+      "usd_equivalent": 99066910.80491999,
+      "conversion_rate": 75860.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-D174AA89",
+      "date": "2026-05-26 20:14:14",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-8C9F49526FE6",
+      "geographic_alignment": {
+        "latitude": 48.9047,
+        "longitude": 2.3123,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USDT",
+      "token_amount": 1.71696,
+      "usd_equivalent": 1.7145390864,
+      "conversion_rate": 0.99859,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-DB6ED41C",
+      "date": "2026-05-26 20:21:25",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-85A9E0FD4E5F",
+      "geographic_alignment": {
+        "latitude": 48.9023,
+        "longitude": 2.3211,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USD",
+      "token_amount": 1281659190.0,
+      "usd_equivalent": 1281659190.0,
+      "conversion_rate": 1.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-0E38B99B",
+      "date": "2026-05-26 20:21:53",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-2A995D0E8EF5",
+      "geographic_alignment": {
+        "latitude": 48.8627,
+        "longitude": 2.3893,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USD",
+      "token_amount": 1000000000.0,
+      "usd_equivalent": 1000000000.0,
+      "conversion_rate": 1.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-DBB7EBAD",
+      "date": "2026-05-26 20:34:35",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-3D83B63FBA03",
+      "geographic_alignment": {
+        "latitude": 48.864,
+        "longitude": 2.3963,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 460.321566,
+      "usd_equivalent": 34975232.58468,
+      "conversion_rate": 75980.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-393CF864",
+      "date": "2026-05-26 20:34:57",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-42065CFE6F58",
+      "geographic_alignment": {
+        "latitude": 48.8284,
+        "longitude": 2.3195,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USDT",
+      "token_amount": 199.0,
+      "usd_equivalent": 198.694336,
+      "conversion_rate": 0.998464,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-BC7A177D",
+      "date": "2026-05-26 20:35:42",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-CE6AC8921CE2",
+      "geographic_alignment": {
+        "latitude": 48.877,
+        "longitude": 2.3132,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 150.0,
+      "usd_equivalent": 11400150.0,
+      "conversion_rate": 76001.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-AE61E57C",
+      "date": "2026-05-26 20:36:41",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-EDE747C68D9D",
+      "geographic_alignment": {
+        "latitude": 48.846,
+        "longitude": 2.3817,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "ETH",
+      "token_amount": 111.0,
+      "usd_equivalent": 229932.06,
+      "conversion_rate": 2071.46,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-1746AE46",
+      "date": "2026-05-26 20:37:04",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-E507662973B5",
+      "geographic_alignment": {
+        "latitude": 48.8687,
+        "longitude": 2.3427,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 46.0,
+      "usd_equivalent": 3496184.0,
+      "conversion_rate": 76004.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-DF08C4C4",
+      "date": "2026-05-26 20:38:12",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-7E34E786F84B",
+      "geographic_alignment": {
+        "latitude": 48.8466,
+        "longitude": 2.3247,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 173.0,
+      "usd_equivalent": 11245000.0,
+      "conversion_rate": 65000.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-E61B9736",
+      "date": "2026-05-26 20:38:40",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-F6C12D955D52",
+      "geographic_alignment": {
+        "latitude": 48.895,
+        "longitude": 2.3113,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USD",
+      "token_amount": 1280047888.0,
+      "usd_equivalent": 1280047888.0,
+      "conversion_rate": 1.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-907C5D87",
+      "date": "2026-05-26 21:04:37",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-E1FAAF71A63B",
+      "geographic_alignment": {
+        "latitude": 48.8639,
+        "longitude": 2.3573,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 190.0,
+      "usd_equivalent": 14392310.0,
+      "conversion_rate": 75749.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-F9D76BB7",
+      "date": "2026-05-26 21:05:53",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-4D5AA89F0751",
+      "geographic_alignment": {
+        "latitude": 48.8821,
+        "longitude": 2.3118,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 4.703,
+      "usd_equivalent": 356252.25,
+      "conversion_rate": 75750.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-0D90AE0A",
+      "date": "2026-05-26 21:17:15",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-17C71AE41DA3",
+      "geographic_alignment": {
+        "latitude": 48.8611,
+        "longitude": 2.3598,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 199.0,
+      "usd_equivalent": 15067683.0,
+      "conversion_rate": 75717.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-2CCE9673",
+      "date": "2026-05-26 21:17:34",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-75DE9CBF7719",
+      "geographic_alignment": {
+        "latitude": 48.8989,
+        "longitude": 2.3996,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "ETH",
+      "token_amount": 199.0,
+      "usd_equivalent": 410702.17,
+      "conversion_rate": 2063.83,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-758E1250",
+      "date": "2026-05-26 21:17:55",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-DEA84699D710",
+      "geographic_alignment": {
+        "latitude": 48.8785,
+        "longitude": 2.3763,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "SOL",
+      "token_amount": 199.0,
+      "usd_equivalent": 29850.0,
+      "conversion_rate": 150.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-29526189",
+      "date": "2026-05-26 21:18:42",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-532207C8D1CF",
+      "geographic_alignment": {
+        "latitude": 48.8897,
+        "longitude": 2.3787,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USDT",
+      "token_amount": 1279724981.0,
+      "usd_equivalent": 1279724981.0,
+      "conversion_rate": 1.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-4FEBAF2E",
+      "date": "2026-05-26 21:20:17",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-80750B9C05FE",
+      "geographic_alignment": {
+        "latitude": 48.8982,
+        "longitude": 2.3045,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USDT",
+      "token_amount": 0.0631579,
+      "usd_equivalent": 0.0630546368335,
+      "conversion_rate": 0.998365,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-5FED50FF",
+      "date": "2026-05-26 21:20:55",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-3CBC46CD52F4",
+      "geographic_alignment": {
+        "latitude": 48.8235,
+        "longitude": 2.3247,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USDT",
+      "token_amount": 0.568421,
+      "usd_equivalent": 0.567493336928,
+      "conversion_rate": 0.998368,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-724D08D6",
+      "date": "2026-05-26 21:21:52",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-8BC90EEFB42A",
+      "geographic_alignment": {
+        "latitude": 48.8745,
+        "longitude": 2.3113,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USD",
+      "token_amount": 1295233017.12,
+      "usd_equivalent": 1295233017.12,
+      "conversion_rate": 1.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-D08957E8",
+      "date": "2026-05-26 21:36:56",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-B69C44411C77",
+      "geographic_alignment": {
+        "latitude": 48.8311,
+        "longitude": 2.3378,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USD",
+      "token_amount": 1295233215.12,
+      "usd_equivalent": 1295233215.12,
+      "conversion_rate": 1.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-581144F0",
+      "date": "2026-05-26 21:44:43",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-D28DC68B050A",
+      "geographic_alignment": {
+        "latitude": 48.8977,
+        "longitude": 2.3026,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USDT",
+      "token_amount": 1282113579.271422,
+      "usd_equivalent": 1279995527.6384656,
+      "conversion_rate": 0.998348,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-0FDD54D9",
+      "date": "2026-05-26 21:46:28",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-04876B5057CD",
+      "geographic_alignment": {
+        "latitude": 48.8107,
+        "longitude": 2.333,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USDT",
+      "token_amount": 103.44123,
+      "usd_equivalent": 103.27272423633,
+      "conversion_rate": 0.998371,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-8667903A",
+      "date": "2026-05-26 22:05:25",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-EF17AD8E2018",
+      "geographic_alignment": {
+        "latitude": 48.8947,
+        "longitude": 2.3317,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "SOL",
+      "token_amount": 199.0,
+      "usd_equivalent": 16660.28,
+      "conversion_rate": 83.72,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-50ED8762",
+      "date": "2026-05-26 22:05:42",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-6426D84E23C6",
+      "geographic_alignment": {
+        "latitude": 48.8795,
+        "longitude": 2.3746,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "ETH",
+      "token_amount": 199.0,
+      "usd_equivalent": 412369.79,
+      "conversion_rate": 2072.21,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-4F24DE05",
+      "date": "2026-05-26 22:06:03",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-81899DB4CC57",
+      "geographic_alignment": {
+        "latitude": 48.8324,
+        "longitude": 2.338,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USDT",
+      "token_amount": 1999.0,
+      "usd_equivalent": 1999.0,
+      "conversion_rate": 1.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-9305ED7C",
+      "date": "2026-05-26 22:06:28",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-E39315BC237E",
+      "geographic_alignment": {
+        "latitude": 48.8352,
+        "longitude": 2.3986,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 199.0,
+      "usd_equivalent": 12935000.0,
+      "conversion_rate": 65000.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-AB48390B",
+      "date": "2026-05-26 22:07:06",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-ACC9940DB707",
+      "geographic_alignment": {
+        "latitude": 48.8857,
+        "longitude": 2.3845,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USD",
+      "token_amount": 1293359559.0,
+      "usd_equivalent": 1293359559.0,
+      "conversion_rate": 1.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-63CEFB23",
+      "date": "2026-05-26 22:09:36",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-74AEB130DEFF",
+      "geographic_alignment": {
+        "latitude": 48.8413,
+        "longitude": 2.3966,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USDT",
+      "token_amount": 129527267.74355,
+      "usd_equivalent": 129335955.96909279,
+      "conversion_rate": 0.998523,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-4DF9C9C7",
+      "date": "2026-05-26 22:13:49",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-1292D23F7611",
+      "geographic_alignment": {
+        "latitude": 48.8305,
+        "longitude": 2.3733,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 188.0,
+      "usd_equivalent": 14286120.0,
+      "conversion_rate": 75990.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-66A69E2F",
+      "date": "2026-05-26 22:16:01",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-35C8657BE832",
+      "geographic_alignment": {
+        "latitude": 48.8222,
+        "longitude": 2.312,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USDT",
+      "token_amount": 152414.724726,
+      "usd_equivalent": 152188.08403033242,
+      "conversion_rate": 0.998513,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-16821AD9",
+      "date": "2026-05-26 22:26:46",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-638CA4402919",
+      "geographic_alignment": {
+        "latitude": 48.8069,
+        "longitude": 2.3447,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USDT",
+      "token_amount": 76053.941764,
+      "usd_equivalent": 75937.88344886813,
+      "conversion_rate": 0.998474,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-7EAC0A56",
+      "date": "2026-05-26 22:29:30",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-25D7C09D4152",
+      "geographic_alignment": {
+        "latitude": 48.8233,
+        "longitude": 2.3893,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USDT",
+      "token_amount": 2.2e-05,
+      "usd_equivalent": 2.1966515999999998e-05,
+      "conversion_rate": 0.998478,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-7C782342",
+      "date": "2026-05-26 22:31:46",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-E19E4916E8FD",
+      "geographic_alignment": {
+        "latitude": 48.8652,
+        "longitude": 2.354,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "SOL",
+      "token_amount": 0.397212,
+      "usd_equivalent": 33.27842136,
+      "conversion_rate": 83.78,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-68AE83EF",
+      "date": "2026-05-26 23:09:19",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-6395FE86F391",
+      "geographic_alignment": {
+        "latitude": 48.8672,
+        "longitude": 2.3703,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USDT",
+      "token_amount": 8803.0,
+      "usd_equivalent": 8790.834254,
+      "conversion_rate": 0.998618,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-B02813D7",
+      "date": "2026-05-26 23:10:16",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-F71E2A909F4D",
+      "geographic_alignment": {
+        "latitude": 48.8588,
+        "longitude": 2.3924,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USDT",
+      "token_amount": 0.565066,
+      "usd_equivalent": 0.564287904118,
+      "conversion_rate": 0.998623,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-0D64E9FC",
+      "date": "2026-05-26 23:15:34",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-C7E19CD8D907",
+      "geographic_alignment": {
+        "latitude": 48.8562,
+        "longitude": 2.3453,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 1.0,
+      "usd_equivalent": 75818.0,
+      "conversion_rate": 75818.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-4CEFEDDD",
+      "date": "2026-05-27 00:21:06",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-2700494F553F",
+      "geographic_alignment": {
+        "latitude": 48.8285,
+        "longitude": 2.3074,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 0.000608,
+      "usd_equivalent": 46.029856,
+      "conversion_rate": 75707.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-BF32769A",
+      "date": "2026-05-27 00:22:05",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-C1C410457A61",
+      "geographic_alignment": {
+        "latitude": 48.8829,
+        "longitude": 2.3567,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 1.0,
+      "usd_equivalent": 65000.0,
+      "conversion_rate": 65000.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-5B642C0B",
+      "date": "2026-05-27 00:22:56",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-2B2903F07F60",
+      "geographic_alignment": {
+        "latitude": 48.9013,
+        "longitude": 2.3169,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "ETH",
+      "token_amount": 4.0,
+      "usd_equivalent": 8272.84,
+      "conversion_rate": 2068.21,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-41F05955",
+      "date": "2026-05-27 10:47:44",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-FE19ADECA051",
+      "geographic_alignment": {
+        "latitude": 48.8598,
+        "longitude": 2.3891,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 1999.0,
+      "usd_equivalent": 129935000.0,
+      "conversion_rate": 65000.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-FAECDE7C",
+      "date": "2026-05-27 10:49:16",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-7C9DE5F25A64",
+      "geographic_alignment": {
+        "latitude": 48.8082,
+        "longitude": 2.3392,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "SOL",
+      "token_amount": 1000.0,
+      "usd_equivalent": 84020.0,
+      "conversion_rate": 84.02,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-6851810B",
+      "date": "2026-05-27 11:02:39",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-93AC186A4164",
+      "geographic_alignment": {
+        "latitude": 48.8963,
+        "longitude": 2.3453,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USD",
+      "token_amount": 724626669.0,
+      "usd_equivalent": 724626669.0,
+      "conversion_rate": 1.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-FAC90FE7",
+      "date": "2026-05-27 11:07:22",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-C6F6DF085C40",
+      "geographic_alignment": {
+        "latitude": 48.865,
+        "longitude": 2.31,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "ETH",
+      "token_amount": 476.263569,
+      "usd_equivalent": 989556.6304897501,
+      "conversion_rate": 2077.75,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-12489143",
+      "date": "2026-05-27 11:09:00",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-6A8EC68F8808",
+      "geographic_alignment": {
+        "latitude": 48.8751,
+        "longitude": 2.3481,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "SOL",
+      "token_amount": 424.227319,
+      "usd_equivalent": 35499.34205392,
+      "conversion_rate": 83.68,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-59C6D558",
+      "date": "2026-05-27 11:16:02",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-DF43DC63CB3C",
+      "geographic_alignment": {
+        "latitude": 48.869,
+        "longitude": 2.3345,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 2346.0,
+      "usd_equivalent": 152490000.0,
+      "conversion_rate": 65000.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-A169F93F",
+      "date": "2026-05-27 11:20:23",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-2C11EB3DA1AA",
+      "geographic_alignment": {
+        "latitude": 48.8408,
+        "longitude": 2.3612,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 7000.0,
+      "usd_equivalent": 455000000.0,
+      "conversion_rate": 65000.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-57EF815F",
+      "date": "2026-05-27 11:21:38",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-AF64ED54C52E",
+      "geographic_alignment": {
+        "latitude": 48.8069,
+        "longitude": 2.3194,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USD",
+      "token_amount": 450000000.0,
+      "usd_equivalent": 450000000.0,
+      "conversion_rate": 1.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-0CE1177A",
+      "date": "2026-05-27 11:25:51",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-88E5C778A82A",
+      "geographic_alignment": {
+        "latitude": 48.9052,
+        "longitude": 2.3416,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 7670.0,
+      "usd_equivalent": 580680360.0,
+      "conversion_rate": 75708.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-4D194A5B",
+      "date": "2026-05-27 11:29:16",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-3C723DB91492",
+      "geographic_alignment": {
+        "latitude": 48.8761,
+        "longitude": 2.3259,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "ETH",
+      "token_amount": 49898.0,
+      "usd_equivalent": 1746430000.0,
+      "conversion_rate": 35000.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-CD3C1089",
+      "date": "2026-05-27 11:29:40",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-3CDC97F3765C",
+      "geographic_alignment": {
+        "latitude": 48.8685,
+        "longitude": 2.3507,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "SOL",
+      "token_amount": 520004.0,
+      "usd_equivalent": 78000600.0,
+      "conversion_rate": 150.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-F3D68161",
+      "date": "2026-05-27 11:30:24",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-70B1608DEDAC",
+      "geographic_alignment": {
+        "latitude": 48.8566,
+        "longitude": 2.387,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USDT",
+      "token_amount": 250349488.0,
+      "usd_equivalent": 250349488.0,
+      "conversion_rate": 1.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-4E264CBF",
+      "date": "2026-05-27 11:31:42",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-C81410F7C743",
+      "geographic_alignment": {
+        "latitude": 48.8799,
+        "longitude": 2.3517,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USD",
+      "token_amount": 26502173.0,
+      "usd_equivalent": 26502173.0,
+      "conversion_rate": 1.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-10E948B9",
+      "date": "2026-05-27 11:32:30",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-5AAF8EAAD21A",
+      "geographic_alignment": {
+        "latitude": 48.8567,
+        "longitude": 2.3043,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 35392.0,
+      "usd_equivalent": 2679457536.0,
+      "conversion_rate": 75708.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-F1277974",
+      "date": "2026-05-27 11:35:45",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-198C2B87A124",
+      "geographic_alignment": {
+        "latitude": 48.8462,
+        "longitude": 2.354,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "ETH",
+      "token_amount": 1299039.0,
+      "usd_equivalent": 45466365000.0,
+      "conversion_rate": 35000.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-9AE4F39F",
+      "date": "2026-05-27 11:37:43",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-314DCEA01D62",
+      "geographic_alignment": {
+        "latitude": 48.8117,
+        "longitude": 2.3792,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 692307.0,
+      "usd_equivalent": 52462332153.0,
+      "conversion_rate": 75779.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-AF979210",
+      "date": "2026-05-27 11:39:57",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-3B8AF5EE9DD4",
+      "geographic_alignment": {
+        "latitude": 48.8633,
+        "longitude": 2.3787,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "ETH",
+      "token_amount": 25406065.0,
+      "usd_equivalent": 889212275000.0,
+      "conversion_rate": 35000.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-D276B259",
+      "date": "2026-05-27 11:40:16",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-0897A2A6DB42",
+      "geographic_alignment": {
+        "latitude": 48.8217,
+        "longitude": 2.3813,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "SOL",
+      "token_amount": 4144.0,
+      "usd_equivalent": 621600.0,
+      "conversion_rate": 150.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-A439544F",
+      "date": "2026-05-27 11:41:42",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-F8A1E53458C9",
+      "geographic_alignment": {
+        "latitude": 48.8106,
+        "longitude": 2.3562,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "ETH",
+      "token_amount": 25142857.0,
+      "usd_equivalent": 879999995000.0,
+      "conversion_rate": 35000.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-5FAE3D3C",
+      "date": "2026-05-27 11:44:14",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-1390453AC994",
+      "geographic_alignment": {
+        "latitude": 48.8902,
+        "longitude": 2.3081,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 13680726.0,
+      "usd_equivalent": 1037423133306.0,
+      "conversion_rate": 75831.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-90E13629",
+      "date": "2026-05-27 11:46:37",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-BB405A723EA7",
+      "geographic_alignment": {
+        "latitude": 48.8218,
+        "longitude": 2.3822,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "ETH",
+      "token_amount": 479993856.0,
+      "usd_equivalent": 16799784960000.0,
+      "conversion_rate": 35000.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-29D4138A",
+      "date": "2026-05-27 11:47:00",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-1237A9D4FF39",
+      "geographic_alignment": {
+        "latitude": 48.8665,
+        "longitude": 2.3641,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "SOL",
+      "token_amount": 44700352.0,
+      "usd_equivalent": 6705052800.0,
+      "conversion_rate": 150.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-C004FF6D",
+      "date": "2026-05-27 11:48:30",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-B4C130F30EFA",
+      "geographic_alignment": {
+        "latitude": 48.8287,
+        "longitude": 2.4005,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 25907956.0,
+      "usd_equivalent": 1964030328448.0,
+      "conversion_rate": 75808.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-1FD85107",
+      "date": "2026-05-27 11:49:13",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-172FCEB02DAF",
+      "geographic_alignment": {
+        "latitude": 48.865,
+        "longitude": 2.3872,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USD",
+      "token_amount": 17120184079548.0,
+      "usd_equivalent": 17120184079548.0,
+      "conversion_rate": 1.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-E999EF72",
+      "date": "2026-05-27 12:10:20",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-D0D2CAA51F26",
+      "geographic_alignment": {
+        "latitude": 48.8541,
+        "longitude": 2.3836,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "ETH",
+      "token_amount": 4321.0,
+      "usd_equivalent": 151235000.0,
+      "conversion_rate": 35000.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-AD4E034F",
+      "date": "2026-05-27 12:12:19",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-450341F61D3B",
+      "geographic_alignment": {
+        "latitude": 48.8587,
+        "longitude": 2.3409,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "BTC",
+      "token_amount": 200000.0,
+      "usd_equivalent": 15155000000.0,
+      "conversion_rate": 75775.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    },
+    {
+      "reference": "MOB-6891DCCA",
+      "date": "2026-05-27 12:12:52",
+      "agency": "Agence de Validation Mobile",
+      "approval_hash": "APR-1B5E1EA20F91",
+      "geographic_alignment": {
+        "latitude": 48.8365,
+        "longitude": 2.3948,
+        "status": "ALIGNED_WITH_RESERVE"
+      },
+      "token_used": "USD",
+      "token_amount": 1712248134548.0,
+      "usd_equivalent": 1712248134548.0,
+      "conversion_rate": 1.0,
+      "validation_status": "APPROVED_BY_MOBILE_DATA_AGENCY",
+      "qualitative_metadata": {
+        "mobility_tier": "Premium Gold",
+        "validation_tool": "Token-Validator v2.1",
+        "enrichment_status": "VIRTUAL_TO_ACCOUNT_COMPLETED"
+      }
+    }
+  ]
+}
