@@ -1,128 +1,189 @@
-"""Command-line interface for the :mod:`idna` package.
+# -*- coding: utf-8 -*-
+from gtts import gTTS, gTTSError, __version__
+from gtts.lang import tts_langs, _fallback_deprecated_lang
+import click
+import logging
+import logging.config
 
-Invoked via ``python -m idna``. See :func:`main` for the entry point.
-"""
+# Click settings
+CONTEXT_SETTINGS = {"help_option_names": ["-h", "--help"]}
 
-import argparse
-import sys
-from collections.abc import Iterable
-from itertools import chain
-from typing import IO, Optional
+# Logger settings
+LOGGER_SETTINGS = {
+    "version": 1,
+    "formatters": {"default": {"format": "%(name)s - %(levelname)s - %(message)s"}},
+    "handlers": {"console": {"class": "logging.StreamHandler", "formatter": "default"}},
+    "loggers": {"gtts": {"handlers": ["console"], "level": "WARNING"}},
+}
 
-from . import IDNAError, decode, encode
-from .core import _alabel_prefix, _unicode_dots_re
-from .package_data import __version__
-
-
-def _looks_like_alabel(s: str) -> bool:
-    """Return True if any label in ``s`` carries the ``xn--`` ACE prefix."""
-    prefix = _alabel_prefix.decode("ascii")
-    return any(label.lower().startswith(prefix) for label in _unicode_dots_re.split(s))
-
-
-def _build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(
-        prog="python -m idna",
-        description=(
-            "Convert a domain name between its Unicode (U-label) and "
-            "ASCII-compatible (A-label) forms. With no mode flag, the "
-            "direction is chosen from the first input — if it contains "
-            "an xn-- label the stream is decoded, otherwise it is "
-            "encoded — and the same mode is applied to every remaining "
-            "input. UTS #46 mapping is applied by default; pass "
-            "--strict to disable it. When no domains are given on the "
-            "command line and stdin is piped, one domain per line is "
-            "read from stdin."
-        ),
-    )
-    mode = parser.add_mutually_exclusive_group()
-    mode.add_argument(
-        "-e",
-        "--encode",
-        dest="mode",
-        action="store_const",
-        const="encode",
-        help="Encode the input to its ASCII A-label form.",
-    )
-    mode.add_argument(
-        "-d",
-        "--decode",
-        dest="mode",
-        action="store_const",
-        const="decode",
-        help="Decode the input from its ASCII A-label form.",
-    )
-    parser.add_argument(
-        "--strict",
-        action="store_true",
-        help="Disable the default UTS #46 mapping and apply IDNA 2008 rules verbatim.",
-    )
-    parser.add_argument(
-        "--version",
-        action="version",
-        version=f"idna {__version__}",
-    )
-    parser.add_argument(
-        "domain",
-        nargs="*",
-        help="One or more domain names to convert. Omit to read from stdin.",
-    )
-    return parser
+# Logger
+logging.config.dictConfig(LOGGER_SETTINGS)
+log = logging.getLogger("gtts")
 
 
-def _iter_stdin(stream: IO[str]) -> Iterable[str]:
-    """Yield non-empty stripped lines from ``stream``, ignoring blanks."""
-    for line in stream:
-        stripped = line.strip()
-        if stripped:
-            yield stripped
+def sys_encoding():
+    """Charset to use for --file <path>|- (stdin)"""
+    return "utf8"
 
 
-def _convert_one(domain: str, mode: str, uts46: bool) -> bool:
-    """Convert ``domain`` and write the result; return ``False`` on failure."""
-    try:
-        if mode == "decode":
-            print(decode(domain, uts46=uts46))
-        else:
-            print(encode(domain, uts46=uts46).decode("ascii"))
-    except IDNAError as err:
-        print(f"idna: {mode} failed for {domain!r}: {err}", file=sys.stderr)
-        return False
-    return True
-
-
-def main(argv: Optional[list[str]] = None) -> int:
-    """Entry point for ``python -m idna``.
-
-    When more than one domain is supplied (via positional arguments or
-    piped stdin) and no mode flag is given, the first input determines
-    the direction and that mode is applied uniformly to the rest.
-
-    :param argv: Argument list excluding the program name. Defaults to
-        :data:`sys.argv` when ``None``.
-    :returns: ``0`` on success, ``1`` if any conversion fails.
+def validate_text(ctx, param, text):
+    """Validation callback for the <text> argument.
+    Ensures <text> (arg) and <file> (opt) are mutually exclusive
     """
-    parser = _build_parser()
-    args = parser.parse_args(argv)
-    uts46 = not args.strict
-
-    if args.domain:
-        domains: Iterable[str] = args.domain
-    elif not sys.stdin.isatty():
-        domains = _iter_stdin(sys.stdin)
-    else:
-        parser.error("a domain argument is required when stdin is a terminal")
-
-    iterator = iter(domains)
-    first = next(iterator, None)
-    if first is None:
-        return 0
-
-    mode = args.mode or ("decode" if _looks_like_alabel(first) else "encode")
-
-    results = [_convert_one(domain, mode, uts46) for domain in chain([first], iterator)]
-    return 0 if all(results) else 1
+    if not text and "file" not in ctx.params:
+        # No <text> and no <file>
+        raise click.BadParameter("<text> or -f/--file <file> required")
+    if text and "file" in ctx.params:
+        # Both <text> and <file>
+        raise click.BadParameter("<text> and -f/--file <file> can't be used together")
+    return text
 
 
-if __name__ == "__main__":
-    sys.exit(main())
+def validate_lang(ctx, param, lang):
+    """Validation callback for the <lang> option.
+    Ensures <lang> is a supported language unless the <nocheck> flag is set
+    """
+    if ctx.params["nocheck"]:
+        return lang
+
+    # Fallback from deprecated language if needed
+    lang = _fallback_deprecated_lang(lang)
+
+    try:
+        if lang not in tts_langs():
+            raise click.UsageError(
+                "'%s' not in list of supported languages.\n"
+                "Use --all to list languages or "
+                "add --nocheck to disable language check." % lang
+            )
+        else:
+            # The language is valid.
+            # No need to let gTTS re-validate.
+            ctx.params["nocheck"] = True
+    except RuntimeError as e:
+        # Only case where the <nocheck> flag can be False
+        # Non-fatal. gTTS will try to re-validate.
+        log.debug(str(e), exc_info=True)
+
+    return lang
+
+
+def print_languages(ctx, param, value):
+    """Callback for <all> flag.
+    Prints formatted sorted list of supported languages and exits
+    """
+    if not value or ctx.resilient_parsing:
+        return
+
+    try:
+        langs = tts_langs()
+        langs_str_list = sorted("{}: {}".format(k, langs[k]) for k in langs)
+        click.echo("  " + "\n  ".join(langs_str_list))
+    except RuntimeError as e:  # pragma: no cover
+        log.debug(str(e), exc_info=True)
+        raise click.ClickException("Couldn't fetch language list.")
+    ctx.exit()
+
+
+def set_debug(ctx, param, debug):
+    """Callback for <debug> flag.
+    Sets logger level to DEBUG
+    """
+    if debug:
+        log.setLevel(logging.DEBUG)
+    return
+
+
+@click.command(context_settings=CONTEXT_SETTINGS)
+@click.argument("text", metavar="<text>", required=False, callback=validate_text)
+@click.option(
+    "-f",
+    "--file",
+    metavar="<file>",
+    # For py2.7/unicode. If encoding not None Click uses io.open
+    type=click.File(encoding=sys_encoding()),
+    help="Read from <file> instead of <text>.",
+)
+@click.option(
+    "-o",
+    "--output",
+    metavar="<file>",
+    type=click.File(mode="wb"),
+    help="Write to <file> instead of stdout.",
+)
+@click.option("-s", "--slow", default=False, is_flag=True, help="Read more slowly.")
+@click.option(
+    "-l",
+    "--lang",
+    metavar="<lang>",
+    default="en",
+    show_default=True,
+    callback=validate_lang,
+    help="IETF language tag. Language to speak in. List documented tags with --all.",
+)
+@click.option(
+    "-t",
+    "--tld",
+    metavar="<tld>",
+    default="com",
+    show_default=True,
+    is_eager=True,  # Prioritize <tld> to ensure it gets set before <lang>
+    help="Top-level domain for the Google host, i.e https://translate.google.<tld>",
+)
+@click.option(
+    "--nocheck",
+    default=False,
+    is_flag=True,
+    is_eager=True,  # Prioritize <nocheck> to ensure it gets set before <lang>
+    help="Disable strict IETF language tag checking. Allow undocumented tags.",
+)
+@click.option(
+    "--all",
+    default=False,
+    is_flag=True,
+    is_eager=True,
+    expose_value=False,
+    callback=print_languages,
+    help="Print all documented available IETF language tags and exit.",
+)
+@click.option(
+    "--debug",
+    default=False,
+    is_flag=True,
+    is_eager=True,  # Prioritize <debug> to see debug logs of callbacks
+    expose_value=False,
+    callback=set_debug,
+    help="Show debug information.",
+)
+@click.version_option(version=__version__)
+def tts_cli(text, file, output, slow, tld, lang, nocheck):
+    """Read <text> to mp3 format using Google Translate's Text-to-Speech API
+    (set <text> or --file <file> to - for standard input)
+    """
+
+    # stdin for <text>
+    if text == "-":
+        text = click.get_text_stream("stdin").read()
+
+    # stdout (when no <output>)
+    if not output:
+        output = click.get_binary_stream("stdout")
+
+    # <file> input (stdin on '-' is handled by click.File)
+    if file:
+        try:
+            text = file.read()
+        except UnicodeDecodeError as e:  # pragma: no cover
+            log.debug(str(e), exc_info=True)
+            raise click.FileError(
+                file.name, "<file> must be encoded using '%s'." % sys_encoding()
+            )
+
+    # TTS
+    try:
+        tts = gTTS(text=text, lang=lang, slow=slow, tld=tld, lang_check=not nocheck)
+        tts.write_to_fp(output)
+    except (ValueError, AssertionError) as e:
+        raise click.UsageError(str(e))
+    except gTTSError as e:
+        raise click.ClickException(str(e))
